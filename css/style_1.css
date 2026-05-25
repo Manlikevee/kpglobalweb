@@ -1,0 +1,550 @@
+ /*
+Theme Name: Zozo Themes Child
+Description: Child Theme for Zozo Themes Theme
+Author: zozothemes
+Version: 1.0
+Template: zozothemes
+Tags: one-column, two-columns, right-sidebar, flexible-header, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
+Text Domain: zozothemes
+*/
+
+/*Custom Style Code Right Here */
+
+@import url("style_4.css");
+
+:root {
+	--theme-color: #fac71d;
+	--dark-txt: #282828;
+	--dark-bg: #2e3c4b;
+	--light-color: #ffffff;
+    --def-txt-color: #777;
+    --trans-dft: all .3s;
+}
+
+body.zozo-load-active #site-content {
+    opacity: 1;
+    overflow-x: hidden;
+}
+
+/* Accordion
+================================================== */
+.acc {
+  margin: 0 auto;
+  max-width: 800px;
+}
+.acc__card {
+  margin: 2em;
+  position: relative;
+}
+.acc__title {
+  background: #fff;
+  box-shadow: 0 0 10px 0 rgb(0 0 0 / 9%);
+  color: #212121;
+  cursor: pointer;
+  display: block;
+  padding: 1em 1.5em;
+  position: relative;
+  text-align: left;
+}
+.acc__title::after {
+  width: 8px;
+  height: 8px;
+  border-right: 1px solid #4a6e78;
+  border-bottom: 1px solid #4a6e78;
+  position: absolute;
+  right: 15px;
+  content: " ";
+  top: 27px;
+  transform: rotate(-45deg);
+  transition: all 0.2s ease-in-out;
+}
+.acc__title.active::after {
+  transform: rotate(45deg);
+  transition: all 0.2s ease-in-out;
+}
+.acc__panel {
+  background: #fff;
+  color: #212121;
+  display: none;
+  margin: 0;
+  padding: 2em;
+  text-align: left;
+}
+.pagination a {
+   padding: 0 !important;
+}
+span.dropdown-toggle:after {
+	display: none;
+}
+.content-widgets-wrapper .widget_categories ul li a:before {
+    background-size: cover !important;
+}
+.content-widgets-wrapper .widget_categories ul li a:before {
+    background: inherit;
+}
+/* Additional CSS */
+.widget_search input.filter-search-text {
+	padding: 0 15px;
+}
+body.post-template-default.single.single-post h4 {
+    line-height: 60px;
+}
+body.post-template-default.single.single-post img {
+    border: 1px solid rgb(0 0 0 / 8%);
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.widget_search .search-form .input-group .btn {
+	padding: 20px 0 35px;
+}
+.single-post .entry-content a {
+    color: #1a73e8 !important;
+}
+.star {
+    margin-top: -15px;
+    margin-bottom: 20px;
+}
+.star li {
+    display: inline-block;
+    margin-left: -9px;
+    padding-right: 6px;
+}
+.star li:first-child {
+    margin-left: -21px;
+}
+a.btn.btn-link.mt-20.typo-dark {
+    text-decoration: underline;
+    color: #000 !important;
+	font-size: 12px;
+    font-weight: 700;
+}
+a.btn.btn-link.mt-20.typo-dark:hover {
+   color: #fac71d !important;
+}
+a.btn.btn-link.mt-20.typo-dark:focus {
+	color: #000;
+}
+a.btn-underline {
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+a.btn-underline:hover {
+	color: #fac71d;
+}
+.client img {
+    border: 1px solid #8080802b;
+    border-radius: 5px;
+	margin-bottom: -15px;
+}
+form.zozo-mc-form input.form-control {
+    border-radius: 5px !important;
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
+button.input-group-addon.zozo-mc.btn.btn-default svg.svg-icon {
+    color: var(--dark-bg) !important;
+}
+form.zozo-mc-form button.input-group-addon.zozo-mc {
+    padding: 0 15px;
+    border: 0;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+}
+.zozo-mc-form button.input-group-addon.zozo-mc.btn.btn-default svg.svg-icon {
+    color: var(--dark-bg) !important;
+}
+html {
+    scroll-behavior: smooth;
+}
+.zozo-products-slide .owl-nav button span {
+    color: var(--dark-bg);
+    vertical-align: super;
+    font-size: 26px;
+    line-height: 23px;
+    display: block;
+    height: 30px;
+}
+.download-compatibility .compatibilities span {
+    display: inline-block;
+    word-break: break-all;
+}
+.download-browsers .browsers span {
+    margin: 0 0 0 5px;
+    display: inline-block;
+}
+.download-sw-version .sw-version span {
+    display: inline-block;
+}
+.lead {
+    font-size: 1.35rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: var(--dark-bg);
+}
+.single-download .zozo-content-wrap h2,
+.single-download .zozo-content-wrap h3 {
+    border-bottom: none;
+    font-weight: 700;
+}
+.single-download .zozo-content-wrap h2 {
+    font-size: 22px;
+    line-height: 32px;
+}
+.single-download .zozo-content-wrap h3 {
+    font-size: 22px;
+    line-height: 32px;
+}
+.padding-lg {
+    padding: 70px 40px !important;
+}
+.footer-widgets-wrap {
+    background: #1e2331 none repeat scroll 0 0;
+    padding: 60px 15px 30px 15px;
+    color: var(--light-color);
+}
+.footer-bottom {
+    padding: 15px 0;
+}
+.single-product-content .row > * {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+h3#item-description__key-functional-for-finxpert-theme {
+    margin-top: 30px;
+}
+.item-bg-light h3.typo-single-h2 {
+    color: var(--dark-bg);
+}
+.dark-bg h3.typo-single-h2 {
+    color: var(--light-color);
+}
+h3.typo-single-h2 {
+    color: var(--dark-bg);
+}
+.advanced-features {
+    text-align: center;
+}
+.advanced-features a {
+    display: inline-block;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    background: #37ab01;
+    color: var(--light-color) !important;
+    font-weight: 700;
+    padding: 4px;
+    position: relative;
+    border-radius: 100px;
+    overflow: hidden;
+    isolation: isolate;
+}
+.advanced-features a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 400%;
+    height: 100%;
+    background: linear-gradient(115deg, #d1d1d1, #022895, #a7bfde);
+    background-size: 25% 100%;
+    animation: button-round 0.75s linear infinite;
+    animation-play-state: running;
+    translate: -5% 0%;
+    transition: translate 0.25s ease-out;
+}
+.advanced-features a span {
+    position: relative;
+    display: block;
+    padding: 20px 40px;
+    font-size: 16px;
+    background-color: var(--light-color);
+    border-radius: 100px;
+    height: 100%;
+    color: #022895;
+}
+.advanced-features a:hover span {
+    background: #022895;
+    color: var(--light-color);
+}
+button.owl-prev{
+    margin-right: 50px;
+}
+@keyframes button-round {
+  to {
+    transform: translateX(-25%);
+  }
+}
+
+/** Testing Speed */
+.hero-image-wrapper {
+  position: absolute;
+  inset: 0;
+  z-index: -1; /* push behind text */
+  overflow: hidden;
+}
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.lcp-fallback-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0 !important;
+  height: 0 !important;
+  opacity: 0 !important;
+  pointer-events: none;
+}
+
+/* Single Page */
+.elementor-element p:last-child {
+    margin-bottom: 0 !important;
+}
+.zoitem-description {
+    padding-bottom: 32px;
+    margin-bottom: 28px;
+    border-bottom: solid 1px #eaeaea;
+}
+.zoitem-wrap .zoitem-description:last-child {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-bottom: none;
+}
+.single-download .zozo-content-wrap ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 5px;
+}
+.single-download .zozo-content-wrap ul.item_tab-list.mb-20 {
+    margin-bottom: 19px;
+}
+.zoitem-list li {
+    font-size: 16px;
+    padding: 2px 0;
+    position: relative;
+    padding-left: 27px;
+    color: #2f3b4a;
+}
+.zoitem-list li span {
+    font-weight: 500;
+}
+.zoitem-list li:before {
+    content: "✔";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0px;
+    font-size: 10px;
+    color: var(--dark-bg);
+    width: 16px;
+    height: 16px;
+    line-height: 15px;
+    background: #1aad2b;
+    text-align: center;
+    border-radius: 50%;
+    color: #fff;
+}
+.zoitem-list.item_features li:last-child,
+.zoitem-list li:last-child {
+    padding-bottom: 0;
+}
+.single .featured-media-inner img {
+    border-radius: 6px;
+}
+.single-download .zozo-content-wrap ul.item_tab-list li {
+    margin-bottom: 14px;
+    position: relative;
+    padding-left: 48px;
+    color: #555;
+}
+.single-download .zozo-content-wrap ul.item_tab-list li:last-child {
+    margin-bottom: 0;
+}
+.single-download .zozo-content-wrap ul.item_tab-list li:before {
+    content: "✔";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0px;
+    font-size: 16px;
+    color: #1aad2b;
+    width: 30px;
+    line-height: 26px;
+    text-align: center;
+    height: 30px;
+    border: solid 1px #2f3b4a;
+    border-radius: 50%;
+}
+.single-download .zozo-content-wrap .tab-section h2.typo-single-h2 {
+    padding-bottom: 17px;
+    margin-bottom: 22px;
+    border-bottom: solid 1px #eaeaea;
+}
+.single-download .zozo-content-wrap .tab-section a.btn.btn-lg {
+    display: block;
+    text-align: center;
+    padding: 12px 12px 15px;
+    border-radius: 8px;
+    font-weight: 500;
+    background-color: #c41334;
+    color: var(--light-color);
+    transition: all .3s;
+    margin-top: 25px;
+}
+.single-download .zozo-content-wrap .tab-section a.btn.btn-lg:hover {
+    background-color: var(--dark-bg);
+    transition: all .3s;
+}
+.zoitem-list.item_perfect-for {
+    padding-bottom: 26px;
+    margin-bottom: 23px;
+    border-bottom: solid 1px #eaeaea;
+}
+.zoitem-list.item_features {
+    margin-bottom: 20px;
+}
+h1.category-title {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+section.intro-hero.fullwidth.about-wrap .sub-title {
+    max-width: 100%;
+    text-align: left;
+    margin-bottom: 16px;
+}
+section.intro-hero.fullwidth.about-wrap .sub-title:last-child {
+    margin-bottom: 0;
+}
+section.intro-hero.fullwidth.about-wrap .align-center {
+    max-width: 1030px;
+    margin: 0;
+}
+section.intro-hero.fullwidth.about-wrap .slide-head {
+    margin-bottom: 16px;
+    font-size: 26px;
+    line-height: 36px;
+}
+.why-service-wrap .service-item.service-item-2 .service-title {
+    padding: 0;
+}
+.why-service-wrap .service-item.service-item-2 img {
+    margin: 0;
+}
+section.blog.fullwidth.lets-collab {
+    padding-bottom: 30px;
+}
+.intro-hero.about-wrap .section-title {
+    padding-left: 0;
+    padding-right: 0;
+}
+section.why-choose.abt-page.fullwidth {
+    padding-bottom: 60px;
+}
+.service-testimonials .testimonials-section {
+    padding: 0;
+}
+@media only screen and (max-width: 1024px) {
+    .let-collaborate-section {
+        width: 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    section.blog.fullwidth.lets-collab {
+        padding-bottom: 0;
+        padding-top: 40px;
+    }
+    .let-left-image img {
+        margin: 0;
+        margin-bottom: 18px;
+        max-width: 100px;
+    }
+    .single-download .col-8 article.type-download .zozo-head-wrap {
+        padding: 16px 20px 20px;
+    }
+    ul.zozo-social-share li > a svg.svg-icon,
+    .zozo-social-share-wrap ul.zozo-social-share li a {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+    }
+    ul.zozo-social-share li > a svg.svg-icon {
+        padding: 12px;
+    }
+    .single-download .post-header {
+        margin-bottom: 13px;
+    }
+    .post-review-wrap {
+        margin-top: 33px;
+    }
+    .single-download .zozo-content-wrap .tab-section h2.typo-single-h2 {
+        padding-bottom: 10px;
+        margin-bottom: 12px;
+    }
+    .single-download .zozo-content-wrap h2.typo-single-h2 {
+        font-size: 24px;
+        line-height: 30px;
+    }
+    .lead {
+        font-size: 1.25rem;
+        margin-bottom: 10px;
+    }
+    .mb-30 {
+        margin-bottom: 25px;
+    }
+    .product-list-style .product-price-wrap, .product-list-style .product-cart-wrap, .product-list-style .product-img-wrap, .product-list-style .product-help-wrap {
+        padding: 0;
+    }
+    .product-list-style .product-title-wrap {
+        margin-bottom: 5px;
+    }
+    section.why-choose.abt-page.fullwidth {
+        padding-bottom: 50px;
+    }
+    .footer-widgets-wrap {
+        padding: 4ch 0px 30px 0px;
+    }
+    .let-collaborate-section h3 {
+        font-size: 36px;
+        margin-bottom: 14px;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .post-review-wrap img {
+        max-width: 250px !important;
+    }
+    .single-download .col-8 article.type-download .zozo-head-wrap {
+        padding: 0;
+    }
+    .single-download .post-header .bread-crumbs {
+        margin-bottom: 0;
+        line-height: 1;
+    }
+    .single-download ul.breadcrumb>li {
+        float: none;
+        font-size: 13px;
+        line-height: 18px;
+    }
+    .single-download .entry-content {
+        margin-top: 15px;
+    }
+    .zoitem-description,
+    .zoitem-list.item_perfect-for {
+        padding-bottom: 10px;
+        margin-bottom: 13px;
+    }
+    .single-download .zozo-content-wrap ul {
+        margin-bottom: 5px;
+    }
+    .post-review-wrap {
+        margin-top: 20px;
+        margin-bottom: 26px;
+    }
+    .download-content-widgets > div {
+        padding: 18px 20px 20px;
+        margin-bottom: 20px;
+    }
+}
